@@ -30,7 +30,7 @@ class Confirmation_Page_Session{
     }
 
     // Hook onto the gateway booking to set the session
-    add_action( 'eventorganiser_pre_gateway_booking', array(Confirmation_Page_Session::get_instance(), 'set_booking_id'));
+    add_action( 'eventorganiser_pre_gateway_booking', array($this, 'set_booking_id'));
 
     return $this->session;
   }

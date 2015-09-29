@@ -53,11 +53,11 @@ function _eventorganiser_load_eo_confirmation_page_session(){
   // Check if wp_session_manager exists. If it does, use it. If it doesn't, fall back to $_SESSSION. If neither exist, display an error
   if ( class_exists( 'WP_Session' ) ) {
     //Don't use PHP sessions as WP_Session exists
-    add_action('init', array ( Confirmation_Page_Session::get_instance(false), 'init' ));
+    add_action('init', array ( Confirmation_Page_Session::get_instance(false), 'init' ), 5);
   }
   elseif( session_status() === PHP_SESSION_NONE || session_status() === PHP_SESSION_ACTIVE){
     // WP_Session doesn't exist, but we can use $_SESSION
-    add_action('init', array ( Confirmation_Page_Session::get_instance(true), 'init' ));
+    add_action('init', array ( Confirmation_Page_Session::get_instance(true), 'init' ), 5);
   }
   else{
     //We have neither WP_Session or $_SESSION. Oh dear. Display an error
