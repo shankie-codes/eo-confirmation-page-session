@@ -29,6 +29,9 @@ class Confirmation_Page_Session{
       $this->session = WP_Session::get_instance();
     }
 
+    echo '<pre>';
+      print_r('ran init');
+    echo '</pre>';
     // Hook onto the gateway booking to set the session
     add_action( 'eventorganiser_pre_gateway_booking', array($this, 'set_booking_id'));
 
@@ -38,6 +41,10 @@ class Confirmation_Page_Session{
   public function set_booking_id($args){
     // $args comes as an array. The first element is the booking id
     $booking_id = $args[0];
+
+    echo '<pre>';
+      print_r('tried to set booking id');
+    echo '</pre>';
 
     $this->session['eo_confirmation_page_booking_id'] = $booking_id; 
 
