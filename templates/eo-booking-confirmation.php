@@ -1,6 +1,6 @@
 <?php
 
-$booking_id = Confirmation_Page_Session::get_instance()->get_booking_id();
+$booking_id = Confirmation_Page_Session::get_instance()->get_booking_id($a['unset']); // Take the unset argument from the shortcode. True by default
 
 if($booking_id):
 
