@@ -49,6 +49,7 @@ function _eventorganiser_load_eo_confirmation_page_session(){
 
   // require(dirname(__FILE__) . '/lib/confirmation-page-session.php');    
   require(dirname(__FILE__) . '/lib/class-confirmation-page-session.php');
+  require(dirname(__FILE__) . '/lib/shortcodes.php');
 
   // Check if wp_session_manager exists. If it does, use it. If it doesn't, fall back to $_SESSSION. If neither exist, display an error
   if ( class_exists( 'WP_Session' ) ) {
