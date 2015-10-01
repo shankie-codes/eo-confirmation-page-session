@@ -24,4 +24,4 @@ function _eventorganiser_booking_confirmation_shortcode_handler($atts){
   return $html;
 }
 
-add_shortcode( 'booking-confirmation' , '_eventorganiser_booking_confirmation_shortcode_handler' );
+add_shortcode( 'booking_confirmation' , '_eventorganiser_booking_confirmation_shortcode_handler' );
