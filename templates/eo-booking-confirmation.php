@@ -10,7 +10,7 @@ if($booking_id):
 
   $event_title = get_the_title($event_id);
 
-  $event_date = eo_get_the_start(null, $event_id, null, $occurrence_id);
+  $event_date = eo_get_the_start( get_option('date_format', 'l jS F Y'), $event_id, null, $occurrence_id);
 
   $message = 'You have booked %d ticket(s) to %s on %s with booking reference %d. Please check your email for a copy of your tickets.';
 
