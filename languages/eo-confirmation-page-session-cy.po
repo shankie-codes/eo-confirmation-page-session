@@ -1,0 +1,52 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Event Organiser Confirmation Page Session\n"
+"POT-Creation-Date: 2015-10-08 13:22-0000\n"
+"PO-Revision-Date: 2015-10-08 13:34-0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: cy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.5\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=4; plural=(n==1) ? 0 : (n==2) ? 1 : (n != 8 && n != "
+"11) ? 2 : 3;\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: lib/class-confirmation-page-session.php:84
+msgid ""
+"EO Confirmation Page Session: neither <a href=\"https://github.com/ericmann/"
+"wp-session-manager\">WP_Session</a> or PHP $_SESSION exist."
+msgstr ""
+
+#: templates/eo-booking-confirmation.php:18
+#, php-format
+msgid ""
+"You have booked %d ticket(s) to %s on %s with booking reference %d. Please "
+"check your email for a copy of your tickets."
+msgstr ""
+"Rydych wedi archebu %d tocyn i %s ar %s gyda'r rhif archeb %d. Archwiliwch "
+"eich ebost am gopi o'ch e-docyn."
+
+#: templates/eo-booking-confirmation.php:41
+msgid "Ticket"
+msgstr "Tocyn"
+
+#: templates/eo-booking-confirmation.php:42
+msgid "Price"
+msgstr "Pris"
+
+#: templates/eo-booking-confirmation.php:53
+msgid "Total"
+msgstr "Cyfanswm"
+
+#: templates/eo-booking-confirmation.php:61
+msgid "No booking available."
+msgstr "Nid oes archebu ar gael."

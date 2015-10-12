@@ -2,10 +2,12 @@
 /**
  * Plugin Name: Event Organiser Confirmation Page Session
  * Description: Stores user's last completed Event Oragniser booking in a WP_Session to allow access to booking meta on a confirmation page.
- * Version: 0.1
+ * Version: 0.2
  * Author: Proper Design
  * Author URI: http://properdesign.rs
  * License: GPL2
+ * Text Domain: eo-confirmation-page-session
+ * Domain Path: /languages
  *
  * Acknowledgements: 
  * Eric Mann's WP_Session plugin https://github.com/ericmann/wp-session-manager
@@ -51,6 +53,9 @@ function _eventorganiser_load_eo_confirmation_page_session(){
   require(dirname(__FILE__) . '/lib/class-confirmation-page-session.php');
   require(dirname(__FILE__) . '/lib/shortcodes.php');
 
+  // Load text domain
+  load_plugin_textdomain( 'eo-confirmation-page-session', FALSE, plugin_basename( dirname( __FILE__ ) ) . '/languages' );
+
   // Check if wp_session_manager exists. If it does, use it. If it doesn't, fall back to $_SESSSION. If neither exist, display an error
   if ( class_exists( 'WP_Session' ) ) {
     //Don't use PHP sessions as WP_Session exists
@@ -65,5 +70,4 @@ function _eventorganiser_load_eo_confirmation_page_session(){
     add_action( 'admin_notices', array(Confirmation_Page_Session::get_instance(), 'display_no_session_error') );
   }
 
-  // add_action( 'admin_notices', array(Confirmation_Page_Session::get_instance(), 'display_no_session_error') );
 }

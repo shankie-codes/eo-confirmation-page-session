@@ -12,10 +12,8 @@ if($booking_id):
 
   $event_date = eo_get_the_start( get_option('date_format', 'l jS F Y'), $event_id, null, $occurrence_id);
 
-  $message = 'You have booked %d ticket(s) to %s on %s with booking reference %d. Please check your email for a copy of your tickets.';
-
   // Echo the booking confirmation message, passing it through gettext
-  $booking_message = sprintf(__($message, 'eo-confirmation-page-session'),
+  $booking_message = sprintf(__('You have booked %d ticket(s) to %s on %s with booking reference %d. Please check your email for a copy of your tickets.', 'eo-confirmation-page-session'),
     $ticket_quantity,
     $event_title,
     $event_date,

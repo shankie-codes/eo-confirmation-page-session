@@ -53,12 +53,17 @@ class Confirmation_Page_Session{
 
   public function get_booking_id($unset = true){
 
-    // Store the ID so that we can unset the variable if asked to
-    $eo_confirmation_page_booking_id = $this->session['eo_confirmation_page_booking_id'];
+    if(isset($this->session['eo_confirmation_page_booking_id'])){
+      // Store the ID so that we can unset the variable if asked to
+      $eo_confirmation_page_booking_id = $this->session['eo_confirmation_page_booking_id'];
 
-    if ( $unset ) unset($this->session['eo_confirmation_page_booking_id']);
+      if ( $unset ) unset($this->session['eo_confirmation_page_booking_id']);
 
-    return $eo_confirmation_page_booking_id;
+      return $eo_confirmation_page_booking_id;
+    }
+    else{
+      return null;
+    }
 
   }
 
